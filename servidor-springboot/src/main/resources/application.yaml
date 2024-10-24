@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /api
+  port: 8100
+spring:
+  jpa:
+    open-in-view: true
+    generate-ddl: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/sd
+    password: postgres
+  sql:
+    init:
+      continue-on-error: true
